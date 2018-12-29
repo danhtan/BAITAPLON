@@ -1,0 +1,49 @@
+.cl{
+	color: red;
+}
+.login{
+	width: 450px;
+	height: 400px;
+	
+    position: absolute;
+    left: 35%;
+    top:20%;
+     background: blue;
+      opacity: 0.7;
+}
+.login h1{
+	font-size: 40px;
+	font-family: 'Tangerine', cursive;
+	color: red;
+	text-align: center;
+	 font-weight: 700;
+}
+.form input[type="text"], .form input[type="password"] {
+   
+    font-size: 22px;
+    border: none;
+    border-bottom: 1px solid #fff; 
+
+    padding: 10px;
+    font-family: 'Molengo', sans-serif;
+}
+.form input[type="password"]{
+	margin-top: 30px;
+}
+.form input[type="submit"] {
+    color: #fff;
+    background: #0894f7;
+    border: none;
+    padding: .5em 4em;
+   margin-top: 40px;
+   margin-left: 110px;
+    font-size: 20px;
+    cursor: pointer;	
+}
+.sub-main-w3 input[type="submit"]:hover {
+    background: #fff;
+    color: #000;
+}
+.hihi{
+	color: red;
+}

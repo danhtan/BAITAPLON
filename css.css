@@ -1,0 +1,13 @@
+*{
+	box-sizing: border-box;
+}
+.left{
+	width: 70%;
+	
+	float: left;
+}
+.right{
+     
+	width: 20%;
+	border: 1px solid #e0ebeb;
+}
