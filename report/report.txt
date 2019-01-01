@@ -1,0 +1,7 @@
+﻿
+- Import csdl qlthuvien.sql.
+-vào link github bải về xong giải nén ra , xong copy vào thu mục c:xampp:htdocs  và đổi tên thư mục thành "phech"(vì trong project có mấy thẻ a có đường dẫn lên phải đổi thanh 'phech ' mới chạy đk)
+- Truy cap   http://localhost:8080/phech/code/login.php
+- Tài khoan dang nhap admin : nguyenthe/123456
+
+

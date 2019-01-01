@@ -1,0 +1,25 @@
+*{
+	box-sizing: border-box;
+}
+.left{
+	width: 60%;
+	height: 500px;
+	/*border: 1px solid black;*/
+	border: 1px solid #e0ebeb;
+	float: left;
+	margin-right: 10px;
+}
+.right{
+     float: left;
+	width: 38%;
+	height: 500px;
+	border: 1px solid #e0ebeb;
+}
+.clear{
+	clear: both;
+}
+.thongbao{
+	background-color: blue;
+	color: white;
+
+}

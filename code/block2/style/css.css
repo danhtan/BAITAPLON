@@ -1,0 +1,94 @@
+*{
+	box-sizing: border-box;
+}
+.left{
+	float: left;
+	width: 60%;
+	height: 350px;
+	border: 1px dotted #c2d6d6;
+	margin: 5px
+}
+.right{
+	background-color: white;
+	float: left;
+	width: 38%;
+	height: 350px;
+	border: 1px dotted #c2d6d6;
+		margin: 5px
+}
+.left2{
+	width: 16%;
+
+
+	height: 700px;
+	float: left;
+
+}
+.center{
+	width: 67%;
+
+	height: 700px;
+	float: left;
+
+}
+.right2{
+	width: 15%;
+	
+	height: 1000px;
+	float: left;
+
+}
+
+
+.sidebar {
+/*  margin: 0;
+  padding: 0;*/
+  width: 180px;
+  background-color: #f1f1f1;
+  /*position: fixed;*/
+ /* height: 100%;
+  overflow: auto;*/
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.loiich{
+	background-color: #800040;
+	 color: white ;
+	  margin-top: 0px;
+	   padding: 2px;
+}
+.right2 p{
+	margin-left: 5px;
+}
+.sachmoi{
+	width: 240px;
+	 height: 350px; 
+	 border:1px solid  #d1e0e0 ;
+	  float: left; margin: 5px;
+	  background-color: white;
+}
+
+.sachmoi:hover{
+	box-shadow: 5px 5px 5px #666;
+ -moz-box-shadow: 5px 5px 5px #666;
+  -webkit-box-shadow: 5px 5px 5px #666;
+  border: 1px solid #75a3a3;
+}
+.clear{
+	clear: 	both;	
+}
