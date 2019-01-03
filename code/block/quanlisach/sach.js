@@ -37,6 +37,7 @@ $(document).ready(function(){
      else{
         $('#add_data_Modal').modal('hide');  
      $('#employee_table').html(data);
+     alert("Thêm Thành Công ");
      location.reload();
      }
     
@@ -94,6 +95,7 @@ $(document).ready(function(){
       alert("lỗi");
     }
     else{
+      alert("Xóa Thành Công ");
     location.reload();
     }
 

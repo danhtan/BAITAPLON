@@ -16,7 +16,11 @@ $sql="INSERT INTO nhanvien(manv,id_user,hotennv,diachi,ngaysinh,gioitinh,sdt,url
 ";
 $resualt=mysqli_query($conn,$sql);
 if($resualt){
+	echo "ok";
     header("location:nhansu.php");
+}
+else{
+	echo "loi";
 }
 
 }

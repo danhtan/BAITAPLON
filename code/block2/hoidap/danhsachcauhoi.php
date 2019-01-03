@@ -13,7 +13,8 @@ while ( $row=mysqli_fetch_array($kq) ){
   <h3 style="color: red"> Câu <?php echo $stt; ?>: <?php echo $row['cauhoi']; ?> </h3>
   <p style="color: blue">Câu Trả Lời:</p> 
   <p style="font-size: 20px"><?php echo $row['cautraloi']; ?></p>
-  </div>
+  
+</div>
 
 
 <?php

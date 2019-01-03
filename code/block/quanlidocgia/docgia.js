@@ -54,7 +54,9 @@ $(document).ready(function(){
     
     
      //$('#abc').load("dssach.php") ;
+
      location.reload();
+       alert("Thêm Thành Công ");
     } 
    
    
@@ -73,8 +75,16 @@ $(document).ready(function(){
    method:"POST",
    data:{employee_id:employee_id},
    success:function(data){ 
+    if(data==="loi"){
+      alert('Lỗi');
+
+    }
+    else{
+   alert("Xóa Thành Công ");
     location.reload();
 
+    }
+ 
    }
   });
 
@@ -111,6 +121,42 @@ $(document).ready(function(){
     $('#dataModal').modal('show');
    }
   });
+
+
+ });
+
+
+ $(document).on('click', '.timkiem', function(){
+
+  var employee_id=$('#sot').val();
+
+  $.ajax({
+   url:"timkiem_docgia.php",
+   method:"POST",
+   data:{employee_id:employee_id},
+   success:function(data){
+    $('#ketqua').html(data);
+   }
+  });
+
+
+
+ });
+
+  $(document).on('click', '.gia_han', function(){
+
+  var employee_id=$(this).attr("id");
+
+  $.ajax({
+   url:"gia_han.php",
+   method:"POST",
+   data:{employee_id:employee_id},
+   success:function(data){
+    $('#employee_detail_giahan').html(data);
+    $('#dataModal_giahan').modal('show');
+   }
+  });
+
 
 
  });

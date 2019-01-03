@@ -37,6 +37,9 @@ else{
 <div class="docgia" id="noidung">
   
 <button type="button" name="age" id="age" data-toggle="modal" data-target="#add_data_Modal" class="btn btn-primary" style="margin: 10px 0px 0px 40px;"><i class="fa fa-plus-circle" style="font-size:16px ; margin-right: 3px"></i>THêm</button> 
+<input type="button" name="timkiem" value="timkiem" class="timkiem" style="float:right;margin: 5px;margin-top: 10px;margin-right: 80px;">
+<input type="text" id="sot" name="sot" style="float:right;width: 200px;margin: 5px; margin-top: 10px;margin-right:30px"> 
+<div id="ketqua">
 <br> 
 <?php
 include("../config.php"); 
@@ -46,7 +49,7 @@ $resualt=mysqli_query($conn,$sql);
 
 while ($row=mysqli_fetch_array($resualt)) {
 ?>
-                <div class="khunganh ">
+                <div class="khunganh " >
                     <div style="height:200px; margin-top:0px "; class="view_data" id="<?php echo $row["madg"]; ?>">
                         <img src="../img/docgia/<?php echo $row['urlhinh'] ?>" style=" margin-left:60px;width:120px;height: 110px;  margin-top: 10px; border-radius: 90%" / >
                         <br>
@@ -75,11 +78,13 @@ while ($row=mysqli_fetch_array($resualt)) {
                             
                           <input type="button" name="delete" value="delete" id="<?php echo $row['madg']; ?>" class="btn btn-info btn-xs delete_data"  />
                            <input type="button" name="view" value="update" id="<?php echo $row['madg']; ?>" class="btn btn-info btn-xs update_data" />
+                             <input type="button" name="giahan" value="gia han" id="<?php echo $row['madg']; ?>" class="btn btn-info btn-xs gia_han" />
                     </div>
                 </div>
                 <?php
 }
 ?>
+</div>
 
 
 </div>
@@ -118,14 +123,30 @@ while ($row=mysqli_fetch_array($resualt)) {
      <input type="text" name="name" id="name" class="form-control" />
      <br />
      <label>Địa Chỉ</label>
-     <input type="text" name="diachi" id="diachi" class="form-control"></intput>
+     <!-- <input type="text" name="diachi" id="diachi" class="form-control"></intput> -->
+       <select class=" form-control" name="diachi" id="diachi">
+       <option>    </option>
+         <option>Hà Nội</option>
+          <option>Nam Định</option>
+              <option>Nghệ An</option>
+          <option>Thanh Hóa</option>
+        
+       
+     </select>
      <br />
      <label>NGày Sinh</label>
       <input type="date" name="ngaysinh" id="ngaysinh" class="form-control"></input>
         <br>
         <br>
       <label>Giới Tính</label>
-      <input type="text" name="gioitinh" id="gioitinh" class="form-control"></input>
+      <!-- <input type="text" name="gioitinh" id="gioitinh" class="form-control"></input> -->
+      <select class=" form-control" name="gioitinh" id="gioitinh">
+       <option>   </option>
+         <option>nam</option>
+          <option>nữ</option>
+        
+       
+     </select>
      <br />
         <label>Hạn Sử Dụng </label>
       <input type="date" name="hsd" id="hsd" class="form-control"></input>
@@ -162,6 +183,26 @@ while ($row=mysqli_fetch_array($resualt)) {
     <h4 class="modal-title">Sửa Thông Tin Nhân Viên</h4>
    </div>
    <div class="modal-body" id="employee_detail_sua">
+    
+   </div>
+   <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+
+
+   <div id="dataModal_giahan" class="modal fade">
+ <div class="modal-dialog">
+  <div class="modal-content">
+   <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <h4 class="modal-title">Gia Hạn Thẻ</h4>
+   </div>
+   <div class="modal-body" id="employee_detail_giahan">
     
    </div>
    <div class="modal-footer">

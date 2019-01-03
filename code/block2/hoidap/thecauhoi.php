@@ -2,7 +2,6 @@
 include("../config.php");
 $mach=$_POST['mach'];
 $cauhoi=$_POST['cauhoi'];
-$cautraloi=$_POST['cautraloi'];
 $tt=$_POST['trangthai'];
 $sql="
 INSERT INTO hoidap(mach,cauhoi,trangthai)  

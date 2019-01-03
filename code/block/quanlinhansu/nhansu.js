@@ -55,13 +55,22 @@ $(document).ready(function(){
     method:"POST",  
     data:$('#insert_form').serialize(),  
     success:function(data){  
-    // $('#insert_form')[0].reset();  
-    $('#noidung').html(data); 
+    // $('#insert_form')[0].reset(); 
+    if(data==='loi') {
+      alert("lỗi");
+    }
+    else{
+            alert("Thêm Thành Công ");
+       $('#noidung').html(data); 
      $('#add_data_Modal').modal('hide');  
     
     
      //$('#abc').load("dssach.php") ;
+
      location.reload();
+
+    }
+   
     } 
    
    });  

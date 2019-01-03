@@ -65,7 +65,7 @@
 </p>
 <h3 style="	color:red">Câu 9: Cách tìm tài liệu tham khảo trong Phòng TLTK như thế nào?</h3>
 		<p style="color:blue">	Trả Lời:</p>
-		<p>Để tìm được tài liệu trong Phòng TLTK, bạn đọc có thể:</p>
+		<p>Để tìm được tài liệu trong Phòng TLTK, bạn đọc có thể:	</p>
 		<br>	
 		<p>	1. Chọn tài liệu ngay trên giá: trên đầu các giá sách có bảng ghi ký hiệu môn loại, chủ đề tài liệu theo thứ tự từ trên xuống dưới, từ trái qua phải.</p>
 		<br>	
@@ -96,7 +96,7 @@
    <div class="modal-header">
   
     <button type="button" class="close" data-dismiss="modal">&times;</button>
-      <h2 style="color: blue" >Thêm Sách Câu Hỏi</h2>
+      <h2 style="color: blue" >Thêm Câu Hỏi</h2>
     
    </div>
    <div class="modal-body">
@@ -113,13 +113,9 @@
      <label>Câu Hỏi</label>
      <input type="text" name="cauhoi" id="cauhoi" class="form-control" />
      <br />
-     <label>Câu tra lời </label>
-      <input type="text" name="cautraloi" id="cautraloi" class="form-control"  />
-     <br />
      <label>Trạng Thái</label>
       <input type="text" name="trangthai" id="trangthai" class="form-control" value="chưa trả lời"/>
         <br>
-   
      <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
      <button type="button" class="btn btn-default" data-dismiss="modal" style="float: right;margin-right: 20px;">Close</button>
     </form>
@@ -153,7 +149,7 @@
   else  
   {  
    $.ajax({  
-    url:"thecauhoi.php",  
+    url:"block2/hoidap/thecauhoi.php",  
     method:"POST",  
     data:$('#insert_form').serialize(),  
     success:function(data){  
@@ -168,7 +164,7 @@
         alert("thêm Thành Công")
           location.reload();
      }
-    //?
+    
     }  
    });  
 

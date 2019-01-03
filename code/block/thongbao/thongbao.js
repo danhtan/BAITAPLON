@@ -1,4 +1,4 @@
-  
+
 $(document).ready(function(){
     $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -9,46 +9,37 @@ $(document).ready(function(){
 
  $('#insert_form').on("submit", function(event){  
   event.preventDefault();  
-  if($('#name').val() == "")  
+  if($('#matb').val() == "")  
   {  
-   alert("Tên Tác Giả Không được để trống");  
+   alert("MÃ Không được để trống ");  
   }  
-  else if($('#tacgia').val() == '')  
+  else if($('#tieude').val() == '')  
   {
 
-   alert("Mã Tác Giả Không được trống ");  
+   alert("Tiêu Đề không được để trống");  
   }  
-  else if($('#namsinh').val() == '')
+  else if($('#noidung').val() == '')
   {  
-   alert("Năm sinh Không được trống");  
+   alert("Nội Dung không được để trống ");  
   }
-   else if($('#quequan').val() == '')
-  {  
-   alert("Quê quán Không được trống");  
-  }
-   
-    else if($('#sdt').val() == '')
-  {  
-   alert("SDT Không được trống");  
-  }
-   
    
   else  
   {  
    $.ajax({  
-    url:"insert_tacgia.php",  
+    url:"insert_thongbao.php",  
     method:"POST",  
     data:$('#insert_form').serialize(),  
-    // beforeSend:function(){  
-    //  $('#insert').val("Inserting");  
-    // },  
     success:function(data){  
-    // $('#insert_form')[0].reset();  
-     $('#add_data_Modal').modal('hide');  
-     $('#employee_table').html(data); 
-     //$('#abc').load("dssach.php") ;
-     alert("Thêm Thành Công");
+    // $('#insert_form')[0].reset();
+     if(data==='lol'){
+      alert("Loi");
+     }  
+     else{
+        $('#add_data_Modal').modal('hide');  
+     $('#employee_table').html(data);
      location.reload();
+     }
+    
     }  
    });  
   }  
@@ -58,7 +49,7 @@ $(document).ready(function(){
   //$('#dataModal').modal();
   var employee_id = $(this).attr("id");
   $.ajax({
-   url:"select_tacgia.php",
+   url:"select_thongbao.php",
    method:"POST",
    data:{employee_id:employee_id},
    success:function(data){
@@ -73,13 +64,17 @@ $(document).ready(function(){
   //$('#dataModal').modal();
   var employee_id = $(this).attr("id");
   $.ajax({
-   url:"update_tacgia.php",
+   url:"update_thongbao.php",
    method:"POST",
    data:{employee_id:employee_id},
    success:function(data){
+
     $('#employee_detail_sua').html(data);
     $('#dataModal_sua').modal('show');
-   }
+   },
+   error: function(){
+    alert('error!');
+  }
   });
  });
 
@@ -87,19 +82,25 @@ $(document).ready(function(){
 
 
   $(document).on('click', '.delete_data', function(){
-  //$('#dataModal').modal();
+
   var employee_id = $(this).attr("id");
   $.ajax({
-   url:"delete_tacgia.php",
+   url:"delete_thongbao.php",
    method:"POST",
    data:{employee_id:employee_id},
    success:function(data){
-    alert("Xóa Thàng Công ");
+    if(data==='loi'){
+      alert("lỗi");
+    }
+    else{
     location.reload();
+    }
+
    }
   });
+
+
  });
 
  
 });  
-

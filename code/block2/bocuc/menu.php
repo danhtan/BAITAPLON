@@ -78,7 +78,7 @@ li.dropdown12 {
    <li><a href="#" id="hoidap" class="hoidap">Hỏi Đáp</a></li>
      
     <li><a href="#" id="gioithieusach" class="gioithieusach">Giới Thiệu Sách</a></li>
-     <li><a href="#" style="float: right;margin-left: 550px" id="Login"  class="Login" >Login</a></li>
+     <li><a href="http://localhost:8080/phech/code/login.php" style="float: right;margin-left: 550px" id="Login"  class="Login" >Login</a></li>
 </ul>
 </div>
 
@@ -186,22 +186,22 @@ li.dropdown12 {
 
  });
 
-        $(document).on('click', '.Login', function(){
+ //        $(document).on('click', '.Login', function(){
 
-  $.ajax({
-   url:"login.php",
-   method:"POST",
-   success:function(data){
+ //  $.ajax({
+ //   url:"login.php",
+ //   method:"POST",
+ //   success:function(data){
 
-    $('#tonhat').html(data); 
-   },
-   error: function(){
-    alert('error!');
-  }
-  });
+ //    $('#tonhat').html(data); 
+ //   },
+ //   error: function(){
+ //    alert('error!');
+ //  }
+ //  });
 
 
- });
+ // });
 
   });  
 

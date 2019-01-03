@@ -125,7 +125,13 @@ else{
    <div class="modal-body">
     <form method="post" id="insert_form">
         <label>Mã Sách</label>
-     <input type="text" name="id_sach" id="id_sach" class="form-control" />
+        <?php
+        $sql="select * from sach ORDER BY id_sach DESC LIMIT 0,1";
+        $kq=mysqli_query($conn,$sql);
+        $row=mysqli_fetch_array($kq);
+
+         ?>
+     <input type="text" name="id_sach" id="id_sach" class="form-control" value="<?php echo $row['id_sach']+1 ?>" />
      <br />
      <label>Tên Sách</label>
      <input type="text" name="name" id="name" class="form-control" />

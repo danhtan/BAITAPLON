@@ -61,7 +61,7 @@ li.dropdown12 {
 <ul>
   <li ><a href="#home"><i class="fa fa-fw fa-home"></i>Home</a></li>
   <li><a href="http://localhost:8080/phech/code/index.php">Trang Chủ</a></li>
-  <li><a href="http://localhost:8080/phech/code/block/quanlinhansu/nhansu.php">Quản Lí Nhân Sự</a></li>
+
   <li><a href="http://localhost:8080/phech/code/block/quanlidocgia/docgia.php">Quản Lí Độc Giả</a></li>
   <li class="dropdown12">
     <a href="javascript:void(0)" class="dropbtn12">Quản Lí Sách</a>
@@ -76,14 +76,14 @@ li.dropdown12 {
     <div class="dropdown-content12">
       <a href="http://localhost:8080/phech/code/block/quanlimuonsach/muonsach.php">Danh Sách phiếu Mượn</a>
       <a href="http://localhost:8080/phech/code/block/quanlitrasach/trasach.php">Danh Sách Phiếu Trả</a>
-   
+
     </div>
   </li>
     <li><a href="http://localhost:8080/phech/code/block/thongke/thongke.php">Thống Kê</a></li>
         <li><a href="http://localhost:8080/phech/code/block/hoidap/hoidap.php">Hỏi Đáp</a></li>
         <li><a href="http://localhost:8080/phech/code/block/thongbao/thongbao.php">Thông Báo</a></li>
              <li style="float: right;"><a href="http://localhost:8080/phech/code/index2.php">Đăng Xuất</a></li>
-                  <li style="float: right;"><a href="http://localhost:8080/phech/code/block/quanlitaikhoan/taikhoan.php">Tạo Tài KHoản </a></li>
+           
 </ul>
 </div>
 

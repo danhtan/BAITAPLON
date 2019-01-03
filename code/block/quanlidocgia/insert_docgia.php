@@ -15,7 +15,7 @@ $sql="INSERT INTO docgia(madg,hotendg,diachi,ngaysinh,gioitinh,hansudung,urlhinh
 ";
 $resualt=mysqli_query($conn,$sql);
 if($resualt){
-    header("location:docgia.php");
+  //  header("location:docgia.php");
 }
 else{
 	echo "loi";

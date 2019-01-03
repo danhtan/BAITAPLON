@@ -7,7 +7,7 @@
    <link rel="stylesheet" type="text/css" href="../style/bootstrap.min.css">
      <script type="text/javascript" src="../style/jquery-3.3.1.js"></script>
      <script type="text/javascript" src="../style/bootstrap.min.js"></script>
-     <script type="text/javascript" src="nhansu.js"></script>
+     <!-- <script type="text/javascript" src="nhansu.js"></script> -->
 
 </head>
 <body style="background-color: #e6f9ff ; width: 100% ;height: 100%">
@@ -102,7 +102,8 @@ while ($row=mysqli_fetch_array($resualt)) {
                             <i class="fa fa-phone"></i><?php echo $row['sdt']; ?>
                         </span>
                         <br>
-                            <input type="button" name="delete" value="delete" id="<?php echo $row["manv"]; ?>" class="btn btn-info btn-xs delete_data" />
+                        <input type="button" name="delete" value="delete" id="<?php echo $row["manv"]; ?>" class="btn btn-info btn-xs delete_data" /> 
+
                            <input type="button" name="view" value="update" id="<?php echo $row["manv"]; ?>" class="btn btn-info btn-xs update_data" />
                            <!-- <input type="button" name="view" value="view" id="<?php echo $row["manv"]; ?>" class="btn btn-info btn-xs view_data" /> -->
 
@@ -132,21 +133,49 @@ while ($row=mysqli_fetch_array($resualt)) {
      <input type="text" name="mans" id="mans" class="form-control" />
          <br />
      <label>Mã Người Dùng</label>
-     <input type="text" name="nguoidung" id="nguoidung" class="form-control"></intput>
+     <!-- <input type="text" name="nguoidung" id="nguoidung" class="form-control"></intput> -->
+       <select class=" form-control" name="nguoidung" id="nguoidung">
+       <option>Chọn Mã người dùng ...</option>
+       <?php
+          $sql="select *from nguoidung";
+          $kq=mysqli_query($conn,$sql);
+          while ($row=mysqli_fetch_array($kq)) {
+          ?>
+          <option><?php echo $row['id_user']; ?></option>
+          <?php
+          }
+       ?>
+     </select>
 
      <br />
      <label>Họ và Tên</label>
      <input type="text" name="name" id="name" class="form-control" />
      <br />
      <label>Địa Chỉ</label>
-     <input type="text" name="diachi" id="diachi" class="form-control"></intput>
+     <!-- <input type="text" name="diachi" id="diachi" class="form-control"></intput> -->
+      <select class=" form-control" name="diachi" id="diachi">
+       <option>    </option>
+         <option>Hà Nội</option>
+          <option>Nam Định</option>
+              <option>Nghệ An</option>
+          <option>Thanh Hóa</option>
+        
+       
+     </select>
      <br />
      <label>NGày Sinh</label>
       <input type="date" name="ngaysinh" id="ngaysinh" class="form-control"></input>
         <br>
         <br>
       <label>Giới Tính</label>
-      <input type="text" name="gioitinh" id="gioitinh" class="form-control"></input>
+      <!-- <input type="text" name="gioitinh" id="gioitinh" class="form-control"></input> -->
+           <select class=" form-control" name="gioitinh" id="gioitinh">
+       <option>   </option>
+         <option>nam</option>
+          <option>nữ</option>
+        
+       
+     </select>
      <br />
      <label>SDT</label>
       <input type="te" name="sdt" id="sdt" class="form-control"></input>
@@ -156,7 +185,14 @@ while ($row=mysqli_fetch_array($resualt)) {
      
      <br />
          <label>Chúc Vụ </label>
-      <input type="te" name="chucvu" id="chucu" class="form-control"></input>
+      <!-- <input type="te" name="chucvu" id="chucu" class="form-control"></input> -->
+        <select class=" form-control" name="chucvu" id="chucvu">
+       <option>  </option>
+         <option>trưởng phòng</option>
+          <option>nhân viên</option>
+           <option>bảo vệ</option>
+       
+     </select>
      <br />
          <label>Gamil </label>
       <input type="te" name="gmail" id="gmail" class="form-control"></input>
@@ -171,7 +207,10 @@ while ($row=mysqli_fetch_array($resualt)) {
   </div>
  </div>
 </div>
-   
+
+
+
+
 
 
    <div id="dataModal_sua" class="modal fade">
@@ -269,16 +308,23 @@ $(document).ready(function(){
     success:function(data){  
     // $('#insert_form')[0].reset();  
     $('#noidung').html(data); 
+
      $('#add_data_Modal').modal('hide');  
     
     
      //$('#abc').load("dssach.php") ;
+
+
      location.reload();
+      alert("Thêm Thành Công");
+
     } 
    
    });  
   }  
  });
+
+
 
 
   $(document).on('click', '.delete_data', function(){
@@ -294,8 +340,12 @@ $(document).ready(function(){
 
     }
     else{
+
        location.reload();
+       alert("Xóa Thành Công");
+
     }
+
    
    }
   });

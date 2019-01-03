@@ -15,6 +15,7 @@ SET hotennv = '$ht', diachi = '$dc',ngaysinh= '$ns',gioitinh='$gt',sdt='$sdt', u
 WHERE  manv= '$id'";
 $result=mysqli_query($conn,$sql);
 if($result){
+	"<script> alert('ok')</script>";
 	header("location:nhansu.php");
 }
 else{

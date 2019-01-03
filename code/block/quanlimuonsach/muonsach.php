@@ -130,7 +130,7 @@ else{
      <select class=" form-control" name="docgia" id="docgia">
        <option>Chọn Mã độc giả...</option>
        <?php
-          $sql="select *from docgia";
+          $sql="SELECT * FROM  docgia  ";
           $kq=mysqli_query($conn,$sql);
           while ($row=mysqli_fetch_array($kq)) {
           ?>

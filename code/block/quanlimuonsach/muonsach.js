@@ -33,11 +33,19 @@ $(document).ready(function(){
     //  $('#insert').val("Inserting");  
     // },  
     success:function(data){  
-    $('#insert_form')[0].reset();  
+      if(data=="loi"){
+        alert("Thẻ Bạn Đã Hết Hạn , hãy Gia Hạn cho Thẻ của bạn");
+      }
+      else{
+         $('#insert_form')[0].reset();  
      $('#add_data_Modal').modal('hide');  
      $('#employee_table').html(data); 
      //$('#abc').load("dssach.php") ;
+     alert("Thêm Thành Công ");
      location.reload();
+
+      }
+   
     }  
    });  
   }  
@@ -150,6 +158,7 @@ $(document).ready(function(){
    method:"POST",
    data:{employee_id:employee_id},
    success:function(data){
+    alert("Xóa Thành Công");
     location.reload();
    }
   });

@@ -15,19 +15,25 @@
 <body>
 	<?php 
     session_start();
-    if(isset($_SESSION['dangnhap'])){
+    if(isset($_SESSION['dangnhap']) && $_SESSION ['quyen_truy_cap']  == 1){
+  
+
     ?>
     <?php
-    	include "models/home.php" ;   		
+   
+    	include "models/home.php" ; 
+         include("block/menu2.php");  		
     ?>
     <?php
        }else{
-       	echo "kkk";
+       	
+        include "models/home.php" ; 
+         include("block/menu1.php");
        }
     ?>
      <div>
                   <?php
-                include("block/menu2.php");
+               
                 ?>
             </div>
     <div class="container" style="margin-top: 10px;" >
@@ -61,7 +67,7 @@
         <div>
             
         </div>
-        <div class="thongbao">
+      <!--   <div class="thongbao">
             <h1> <i class="fa fa-bell-slash" style="font-size:36px ;color:white"></i>Thông báo mới </h1>
         </div>
         <div >
@@ -69,7 +75,7 @@
             include ('block/thongbao.php');
             ?>
             
-        </div>
+        </div> -->
        </div>
     </div>
      <div class="container">   
